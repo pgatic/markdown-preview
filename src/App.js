@@ -1,7 +1,7 @@
-import Logo from "./logo.png";
 import "./App.css";
 import React, { Component } from "react";
 import marked from "marked";
+import initialInput from "./data";
 
 marked.setOptions({
   breaks: true,
@@ -11,24 +11,7 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      input: `## Hi there, feel free to use 
-# REACT markdown preview
-libraries used in project:
-- react
-- bootstrap
-- marked
->  **Wisdom begins in wonder**.
->  _Socrates_
-![logo](${Logo})[github](https://github.com/pgatic/markdown-preview)
-Use \`code\` in your Markdown file.
-\`\`\`
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root")
-);
-\`\`\``,
+      input: initialInput,
     };
   }
 
